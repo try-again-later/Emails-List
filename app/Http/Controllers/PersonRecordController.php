@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class PersonRecordController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        return view('person-record.index');
     }
 
     public function create()
     {
-        return redirect()->route('user.index');
+        return redirect()->route('person-record.index');
     }
 }

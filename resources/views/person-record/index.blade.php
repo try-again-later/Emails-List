@@ -9,13 +9,13 @@
 
     <main>
         <section>
-            <h2>Add a new user</h2>
-            <x-user.create-form />
+            <h2>Add a new record</h2>
+            <x-person-record.create-form />
         </section>
 
         <section>
-            <h2>A list of users</h2>
-            <x-user.list />
+            <h2>A list of records</h2>
+            <x-person-record.list />
         </section>
     </main>
 @endsection
