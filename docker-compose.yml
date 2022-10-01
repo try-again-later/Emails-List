@@ -9,7 +9,7 @@ services:
         depends_on:
             - mysql
         ports:
-            - 8000:80
+            - '8000:80'
 
     mysql:
         container_name: emails-list-mysql
@@ -20,4 +20,4 @@ services:
             - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
             - MYSQL_DATABASE=${DB_DATABASE}
         ports:
-            - 5432:5432
+            - '3306:3306'

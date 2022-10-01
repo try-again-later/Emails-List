@@ -29,9 +29,9 @@ RUN \
 
 COPY --from=frontend-assets /tmp/public/build/ /var/www/html/public/build/
 
+RUN composer install
+
 RUN chown -R www-data:www-data /var/www/html/
 USER www-data
 
-RUN \
-    composer install && \
-    php artisan key:generate
+RUN php artisan key:generate
