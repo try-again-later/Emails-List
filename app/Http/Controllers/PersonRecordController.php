@@ -10,7 +10,7 @@ class PersonRecordController extends Controller
     public function index()
     {
         return view('person-record.index', [
-            'personRecords' => PersonRecord::all(),
+            'personRecords' => PersonRecord::orderBy('created_at', 'desc')->get(),
         ]);
     }
 

@@ -2,10 +2,10 @@
     'personRecords' => [],
 ])
 
-<ul>
+<ul {{ $attributes->class('w-full flex flex-col gap-8') }}>
     @foreach ($personRecords as $personRecord)
-        <li>
-            <x-person-record.show :person-record="$personRecord" />
+        <li class="flex">
+            <x-person-record.show :person-record="$personRecord" class="min-w-full" />
         </li>
     @endforeach
 </ul>
