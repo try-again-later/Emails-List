@@ -36,7 +36,7 @@ cp .env.example .env
 docker-compose up -d
 
 # setup the database
-docker exec -d emails-list-app php artisan migrate:fresh --seed
+docker exec emails-list-app php artisan migrate:fresh --seed
 ```
 
 The app will be available at [localhost:8000](http://localhost:8000).
