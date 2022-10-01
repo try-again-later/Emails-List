@@ -15,7 +15,7 @@
 
         <section>
             <h2>A list of records</h2>
-            <x-person-record.list />
+            <x-person-record.list :person-records="$personRecords" />
         </section>
     </main>
 @endsection

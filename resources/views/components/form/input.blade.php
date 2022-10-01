@@ -12,5 +12,9 @@
         name="{{ $name }}"
         id="{{ $name }}"
         @if ($required) required @endif
+        value="{{ old($name) }}"
     />
+    @error($name)
+        <p>{{ $message }}</p>
+    @enderror
 </div>
