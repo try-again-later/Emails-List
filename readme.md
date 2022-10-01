@@ -16,11 +16,11 @@ npm run build
 
 # setup the database
 docker-compose up -d mysql
-DB_HOST=localhost php artisan migrate:fresh --seed
+DB_HOST=127.0.0.1 php artisan migrate:fresh --seed
 
 # run the app
 php artisan key:generate
-DB_HOST=localhost php artisan serve
+DB_HOST=127.0.0.1 php artisan serve
 ```
 
 The app will be available at [localhost:8000](http://localhost:8000).
