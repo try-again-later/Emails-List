@@ -17,5 +17,7 @@
             <x-section-heading>A list of records</x-section-heading>
             <x-person-record.list :person-records="$personRecords" />
         </x-section>
+
+        <x-toast />
     </main>
 @endsection

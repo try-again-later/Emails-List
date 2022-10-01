@@ -24,6 +24,8 @@ class PersonRecordController extends Controller
 
         PersonRecord::query()->create($request->only(['name', 'email', 'message']));
 
-        return redirect()->route('person-record.index');
+        return redirect()
+            ->route('person-record.index')
+            ->with('new-person-record-email', $request->input('email'));
     }
 }
