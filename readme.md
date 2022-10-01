@@ -5,7 +5,7 @@ cp .env.example .env
 
 # setup the database
 docker-compose up -d postgres
-php artisan migrate:fresh
+php artisan migrate:fresh --seed
 
 # download dependencies and build the frontend
 npm i
