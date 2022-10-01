@@ -10,8 +10,8 @@ FROM php:8.1-apache-bullseye
 
 RUN \
     apt update && \
-    apt install -y curl git unzip zip libpq-dev && \
-    docker-php-ext-install pdo pgsql pdo_pgsql
+    apt install -y curl git unzip zip && \
+    docker-php-ext-install pdo_mysql
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 

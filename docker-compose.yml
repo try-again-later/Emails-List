@@ -7,16 +7,17 @@ services:
             context: .
             dockerfile: Dockerfile
         depends_on:
-            - postgres
+            - mysql
         ports:
             - 8000:80
 
-    postgres:
-        container_name: emails-list-postgres
-        image: postgres:14.5
+    mysql:
+        container_name: emails-list-mysql
+        image: mysql:8-debian
         environment:
-            - POSTGRES_USER=${DB_USERNAME}
-            - POSTGRES_PASSWORD=${DB_PASSWORD}
-            - POSTGRES_DB=${DB_DATABASE}
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+            - MYSQL_DATABASE=${DB_DATABASE}
         ports:
             - 5432:5432

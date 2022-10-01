@@ -15,7 +15,7 @@ composer install
 npm run build
 
 # setup the database
-docker-compose up -d postgres
+docker-compose up -d mysql
 DB_HOST=localhost php artisan migrate:fresh --seed
 
 # run the app
